@@ -1,0 +1,1 @@
+package com.studentgig.repository; import com.studentgig.model.FreelanceJob; import org.springframework.data.jpa.repository.JpaRepository; public interface FreelanceJobRepository extends JpaRepository<FreelanceJob,Long>{}

@@ -1,0 +1,3 @@
+package com.studentgig.model;
+import jakarta.persistence.*; import java.time.LocalDateTime;
+@Entity @Table(name="users",indexes={@Index(name="idx_user_email",columnList="email",unique=true)}) public class User { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) public Long id; @Column(nullable=false,unique=true) public String email; @Column(nullable=false) public String password; @Column(nullable=false) public String name; public String role="STUDENT"; public String phone,location,bio,degree; public Integer graduationYear; public String skills,experience,languages,availability,github,linkedin,portfolio,leetcode,hackerrank,codechef,gfg,kaggle,resumePath; public int profileViews=0; public LocalDateTime createdAt=LocalDateTime.now(); }

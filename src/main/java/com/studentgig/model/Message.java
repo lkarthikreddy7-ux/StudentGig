@@ -1,0 +1,2 @@
+package com.studentgig.model; import jakarta.persistence.*; import java.time.LocalDateTime;
+@Entity @Table(name="messages",indexes={@Index(name="idx_msg_receiver",columnList="receiverId")}) public class Message { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) public Long id; public Long senderId,receiverId; @Column(length=4000) public String content; public boolean readFlag=false; public LocalDateTime sentAt=LocalDateTime.now(); }
